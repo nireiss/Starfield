@@ -1,4 +1,3 @@
-
 class Particle
 {
 double myX, myY, myAngle, mySpeed; 
@@ -44,38 +43,42 @@ class oddBall extends Particle{
     rect((float)myX, (float)myY, 15, 15);
   }
   void show(){
-    fill(255, 0, 0);
-    rect((int)myX, (int)myY, 15, 15);
+    fill(79, 97, 84);
+    ellipse((int)myX, (int)myY, 25, 15);
+    fill(90, 102, 140);
+    arc((int)myX, (int)myY, 15, 15, radians(180), radians(360), OPEN);
+    
+    //ellipse((int)myX, (int)myY - 3, 15, 15);
     }
   void move(){
     if (keyPressed) {
      if (key == 'w' || key == 'W'){
-     myY = myY - 2;
+     myY = myY - 3;
      
      } 
     }
      if (keyPressed) {
      if (key == 's' || key == 'S'){
-     myY = myY+ 2;
+     myY = myY+ 3;
      
      } 
     }
        if (keyPressed) {
      if (key == 'a' || key == 'A'){
-     myX = myX - 2;
+     myX = myX - 3;
      
      } 
     }
       if (keyPressed) {
      if (key == 'd' || key == 'D'){
-     myX = myX + 2;
+     myX = myX + 3;
      
      } 
     }
-    
     /*
-    myX = mouseX ;
-    myY = mouseY;
-*/
+    if(keyPressed) { // maybe make laser shoot later if I have time
+      if (key == 'e' || key == 'E'){
+    }}
+    */
 }
 }
